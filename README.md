@@ -1,24 +1,19 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Coding%20test%20vue"/>
-# coding-test-vue
 
 ## 아이온커뮤니케이션즈 코딩테스트 과제
 주어진 Figma 디자인으로 pc, mobile 화면 제작
-
-### 설명
-장바구니와 찜은 vuex를 사용하였고, </br>
-단일 화면으로 구성되어 있어 따로 router를 사용하지 않았습니다.
 
 ### 폴더 구조
 ```
 📦 coding-test-vue
 ├─ src
-│  ├─ assets      // 컴파일 되지 않는 font 저장소
-│  ├─ components  // 전역으로 사용하는 component 폴더
-│  ├─ filter      // 날짜 데이터를 가공
-│  ├─ icons       // svg icon component 모음
-│  ├─ store       // 장바구니, 찜 스토어
-│  ├─ styles      // css 폴더
-│  ├─ views       // 화면 구성 폴더
+│  ├─ assets      
+│  ├─ components  
+│  ├─ filter      
+│  ├─ icons       
+│  ├─ store       
+│  ├─ styles      
+│  ├─ views       
 │  ├─ App.vue 
 │  └─ main.js
 ├─ .eslintrc.js
