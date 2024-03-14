@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+// shadow
+$shadow: 0 4px 8px rgba(248, 249, 250, 1);
+$shadow-white: 0 4px 8px rgba(248, 249, 250, 1);
+$shadow-blue: 10px 10px 10px rgba(225, 231, 255, 0.25);
+
+html {
+  --color-white: #ffffff;
+  --color-primary: #2b8a3e;
+  --color-light-primary: #37b24d;
+  --color-yellow: #fcc419;
+  --color-light-yellow: #ffec99;
+  --color-red: #e03131;
+  --color-dark-gray: #212529;
+  --color-gray: #495057;
+  --color-light-gray: #dee2e6;
+  --color-bg: #f8f9fa;
+  --color-black: #000000;
+}

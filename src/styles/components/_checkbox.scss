@@ -1,0 +1,107 @@
+@charset "utf-8";
+.t-checkbox {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  margin-right: 30px;
+
+  .t-checkbox__input {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    &::after {
+      display: inline-block;
+      content: '';
+      vertical-align: middle;
+      height: 1px;
+    }
+  }
+
+  .t-checkbox__inner {
+    display: inline-block;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-gray-30);
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-white);
+    z-index: 1;
+    transition:
+      border-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46),
+      background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
+
+    &::after {
+      box-sizing: content-box;
+      content: '';
+      border-width: 2px;
+      border-left: 0;
+      border-top: 0;
+      border-style: solid;
+      border-color: var(--color-white);
+      width: 5px;
+      height: 10px;
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      transform-origin: center;
+      @include vendorPrefix('transform', rotate(45deg) scaleY(0));
+      @include vendorPrefix('transition', transform 0.15s ease-in 0.05s);
+    }
+  }
+
+  .t-checkbox__original {
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+
+  .t-checkbox__label {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+
+  .t-checkbox__input.is-checked .t-checkbox__inner {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+
+    &::after {
+      @include vendorPrefix('transform', rotate(45deg) scaleY(1));
+    }
+  }
+
+  .t-checkbox__input.is-disabled {
+    .t-checkbox__inner {
+      background-color: var(--color-light-gray);
+      border-color: var(--color-light-gray);
+      cursor: not-allowed;
+
+      &::after {
+        cursor: not-allowed;
+        border-color: var(--color-light-gray);
+      }
+    }
+  }
+
+  &.is-disabled {
+    .t-checkbox__label {
+      color: var(--color-light-gray);
+      cursor: not-allowed;
+    }
+  }
+}

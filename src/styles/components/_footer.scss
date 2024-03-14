@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.footer {
+  background: #333333;
+  color: var(--color-white);
+  text-align: center;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 90px 0;
+    .svg-icon {
+      color: var(--color-white);
+      font-size: 130px;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 16px;
+      margin-top: 40px;
+    }
+  }
+}
