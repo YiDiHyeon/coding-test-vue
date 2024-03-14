@@ -22,6 +22,17 @@
 └─ vue.config.js
 ```
 
+### 시작하기
+1. 프로젝트 소스코드를 **Git clone or download**를 통해 로컬에 설치합니다.
+2. Node version을 참고하여, 다운 받은 폴더에서 아래 명령어를 순서대로 실행하세요.
+      ```bash
+      npm ci 
+      ```
+    
+    프로젝트 실행
+      ```bash
+       npm run dev
+      ```
 ### 사용 기술 스택
 - Node : v18.13.0
 - vue : v2.6.14
