@@ -2,11 +2,7 @@
 .t-checkbox {
   position: relative;
   cursor: pointer;
-  display: inline-block;
-  white-space: nowrap;
   user-select: none;
-  margin-right: 30px;
-
   .t-checkbox__input {
     white-space: nowrap;
     cursor: pointer;
@@ -28,7 +24,7 @@
     position: relative;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--color-gray-30);
+    border-color: #bdbdbd;
     border-radius: 2px;
     box-sizing: border-box;
     width: 20px;
@@ -39,6 +35,10 @@
       border-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46),
       background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
 
+    &:hover {
+      border-color: var(--color-primary);
+    }
+
     &::after {
       box-sizing: content-box;
       content: '';
@@ -46,7 +46,7 @@
       border-left: 0;
       border-top: 0;
       border-style: solid;
-      border-color: var(--color-white);
+      border-color: var(--color-primary);
       width: 5px;
       height: 10px;
       position: absolute;
@@ -78,7 +78,7 @@
 
   .t-checkbox__input.is-checked .t-checkbox__inner {
     border-color: var(--color-primary);
-    background: var(--color-primary);
+    background: var(--color-white);
 
     &::after {
       @include vendorPrefix('transform', rotate(45deg) scaleY(1));
